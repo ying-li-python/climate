@@ -161,7 +161,7 @@ def start_end_calculations(start, end):
             # return results in JSON
             return jsonify(final_calculations)
     
-    # return error message if start date not in dates database
+    # return error message if start date or end date not in dates database
     else: 
         return jsonify({"error": f"Start Date on {start} or End Date {end} not found."}), 404 
 

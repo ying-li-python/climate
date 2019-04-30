@@ -14,29 +14,25 @@ With the climate data, let's create an API to show precipitation and temperature
 $ python flaskapp.py
 ```
 
-- Open a new window and type localhost:5000/ and you should be able to see the available routes as shown: 
+- Open a new window and type localhost:5000/ and you should see the <b>available routes</b> on the homepage
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/homepage.png"> 
 
 ## Flask App
 While the app is running, let's navigate to the different API routes! 
 
-Below shows an example of the precipitation and temperature records in JSON
-
-@ http://localhost:5000/api/v1.0/precipitation  
+#### Precipitation API example @ http://localhost:5000/api/v1.0/precipitation  
 
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/precipitation_json.png"> 
 
-@ http://localhost:5000/api/v1.0/tobs
+#### Temperature API example @ http://localhost:5000/api/v1.0/tobs
 
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/temp_json.png">
 
-Below is an example showing tmin, tavg, and tmax for 2017-01-01 
-@ http://localhost:5000/api/v1.0/2017-01-01
+#### tmin, tavg, and tmax for 2017-01-01 @ http://localhost:5000/api/v1.0/2017-01-01
 
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/start_date_json.png">
 
-Below is an example showing tmin, tavg, and tmax for the start date, 2017-02-28, and end date, 2017-03-05
-@ http://localhost:5000/api/v1.0/2017-02-28/2017-03-05
+#### tmin, tavg, and tmax for 2017-01-01 for the start date, 2017-02-28, and end date, 2017-03-05 @ http://localhost:5000/api/v1.0/2017-02-28/2017-03-05
 
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/start_end_date_json.png">
 

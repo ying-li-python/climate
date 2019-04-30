@@ -14,7 +14,7 @@ With the climate data, let's create an API to show precipitation and temperature
 $ python flaskapp.py
 ```
 
-- Open a new window and type localhost:5000/ and you should see the <b>available routes</b> on the homepage
+- Open a new window and type localhost:5000/ and you should see the <b>available routes</b> listed:
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/homepage.png"> 
 
 ## Flask App
@@ -32,7 +32,7 @@ While the app is running, let's navigate to the different API routes!
 
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/start_date_json.png">
 
-#### tmin, tavg, and tmax for 2017-01-01 for the start date, 2017-02-28, and end date, 2017-03-05 @ http://localhost:5000/api/v1.0/2017-02-28/2017-03-05
+#### tmin, tavg, and tmax for dates 2017-02-28 to 2017-03-05 @ http://localhost:5000/api/v1.0/2017-02-28/2017-03-05
 
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/start_end_date_json.png">
 
@@ -50,6 +50,7 @@ While the app is running, let's navigate to the different API routes!
 
 #### Figure 3
 <img src="https://github.com/ying-li-python/climate/blob/master/Images/trip_temperature_average.png">
+
 - Considering the daily normals based on historic data, the average temperature is at around 70 degrees, with lows at 57 degrees and highs at 80 degrees. 
 
 - Based these data obeservations, the climate is likely to be comfortably warm during our trip!

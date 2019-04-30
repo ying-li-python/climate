@@ -89,8 +89,8 @@ def stations():
     all_stations = list(np.ravel(results))
     return jsonify(all_stations)
     
-    # below is an alternative code that also works, where Python 
-    # reads the CSV file and reformat into JSON 
+    # below is an alternative code that also works, where we use Pandas to
+    # read the CSV file and reformat into JSON 
     
     # df = pd.read_csv("Resources/hawaii_stations.csv")
     # df = json.loads(df.to_json(orient='records'))

@@ -1,3 +1,22 @@
+'''
+Welcome back! Let's create an accessible API of our climate data from our 
+query in SQL Alchemy using Flask. 
+
+We will use SQL Alchemy and ORM to read our data, and create available
+routes in Flask, where each function returns an API in JSON format 
+from a specific query.
+
+As a result, we will have the following available routes: 
+- homepage
+- precipitation data of the previous 12 months 
+- temperature data of the previous 12 months 
+- list of stations
+- calculated tmin, tavg, tmax from a range of the start date to the most 
+recent record
+- calculated tmin, tavg, tmax between a specified start and end date
+
+'''
+
 # import dependencies 
 from flask import Flask, jsonify
 import json
@@ -66,15 +85,16 @@ def precipitation():
 # station API that lists all stations from CSV file in JSON
 @app.route("/api/v1.0/stations")
 def stations():
-    # below is the recommended way, which works 
-    #results = session.query(Station.id, Station.station, Station.name).all()
-    #all_stations = list(np.ravel(results))
-    #return jsonify(all_stations)
-
-    # have Python read the CSV file and reformat into JSON 
-    df = pd.read_csv("Resources/hawaii_stations.csv")
-    df = json.loads(df.to_json(orient='records'))
-    return jsonify(df)
+    results = session.query(Station.id, Station.station, Station.name).all()
+    all_stations = list(np.ravel(results))
+    return jsonify(all_stations)
+    
+    # below is an alternative code that also works, where Python 
+    # reads the CSV file and reformat into JSON 
+    
+    # df = pd.read_csv("Resources/hawaii_stations.csv")
+    # df = json.loads(df.to_json(orient='records'))
+    # return jsonify(df)
 
 # temperature API that lists date and temperature in JSON
 @app.route("/api/v1.0/tobs")

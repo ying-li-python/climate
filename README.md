@@ -1,4 +1,4 @@
-# Climate 
+# Aloha, cli-mate 
 Let's analyze climate data to explore climate conditions before our upcoming Hawaii trip in February! 
 
 With the climate data, let's create an API to show precipitation and temperature data in JSON using Flask.
@@ -6,9 +6,14 @@ With the climate data, let's create an API to show precipitation and temperature
 ## Resources 
 - Data has been kindly provided by UC Berkeley's Data Analytics and Visualization
 
-## Running the scripts
-- Open Jupyter Notebook and run the file for climate analysis using SQL Alchemy, Matplotlib, Pandas
+## Running Jupyter Notebook 
+- In terminal, go to the project directory and run the jupyter notebook file for climate analysis 
+```
+$ cd climate
+$ jupyter notebook 
+```
 
+## Running Flask app
 - To run the flaskapp, type in terminal:
 ```
 $ python flaskapp.py
